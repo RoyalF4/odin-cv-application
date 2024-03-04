@@ -1,15 +1,17 @@
-import EditSection from './EditSection';
 import EditHeading from './EditHeading';
+import EditPersonal from './EditPersonal';
+import EditWork from './EditWork';
+import EditEducation from './EditEducation';
 
 function EditSidebar() {
   return (
     <div className="edit-container">
       <EditHeading text="Personal Details" />
-      <EditSection />
+      <EditPersonal />
       <EditHeading text="Education" />
-      <EditSection />
+      <EditEducation />
       <EditHeading text="Work Experience" />
-      <EditSection />
+      <EditWork />
     </div>
   );
 }
