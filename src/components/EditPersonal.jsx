@@ -15,6 +15,7 @@ function EditPersonal() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+          <p className="hidden">{name}</p>
         </label>
       </div>
       <div className="input-container">
@@ -26,6 +27,7 @@ function EditPersonal() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
+        <p className="hidden">{email}</p>
       </div>
       <div className="input-container">
         <label>
@@ -36,7 +38,10 @@ function EditPersonal() {
             onChange={(e) => setPhone(e.target.value)}
           />
         </label>
+        <p className="hidden">{phone}</p>
       </div>
+      <button type="button">Edit</button>
+      <button type="submit">Submit</button>
     </div>
   );
 }
