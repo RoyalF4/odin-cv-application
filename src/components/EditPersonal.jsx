@@ -1,47 +1,100 @@
 import { useState } from 'react';
 
 function EditPersonal() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [show, setShow] = useState({
+    form: true,
+    edit: false,
+    data: false,
+  });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+
+  function handleSubmit() {
+    setShow({
+      form: false,
+      edit: true,
+      data: true,
+    });
+  }
+
+  function handleEdit() {
+    setShow({
+      form: true,
+      edit: false,
+      data: false,
+    });
+  }
 
   return (
     <div className="edit-personal-container">
-      <div className="input-container">
-        <label>
-          Name
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <p className="hidden">{name}</p>
-        </label>
-      </div>
-      <div className="input-container">
-        <label>
-          Email
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <p className="hidden">{email}</p>
-      </div>
-      <div className="input-container">
-        <label>
-          Phone
-          <input
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </label>
-        <p className="hidden">{phone}</p>
-      </div>
-      <button type="button">Edit</button>
-      <button type="submit">Submit</button>
+      {show.form && (
+        <form className="personal-form" onSubmit={handleSubmit}>
+          <div className="input-container">
+            <label>
+              Name
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="input-container">
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="input-container">
+            <label>
+              Phone
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      )}
+      {show.edit && (
+        <div className="personal-container">
+          <div>
+            <h3 className="data-heading">Name</h3>
+            <p className="data">{formData.name}</p>
+          </div>
+          <div>
+            <h3 className="data-heading">Email</h3>
+            <p className="data">{formData.email}</p>
+          </div>
+          <div>
+            <h3 className="data-heading">Phone</h3>
+            <p className="data">{formData.phone}</p>
+          </div>
+          <button type="button" onClick={handleEdit}>
+            Edit
+          </button>
+        </div>
+      )}
     </div>
   );
 }
