@@ -3,6 +3,7 @@ import EditHeading from './EditHeading';
 import EditPersonal from './EditPersonal';
 import EditWork from './EditWork';
 import EditEducation from './EditEducation';
+import '../css/EditSection.css';
 
 function EditSidebar({ onPersonalSubmit }) {
   return (

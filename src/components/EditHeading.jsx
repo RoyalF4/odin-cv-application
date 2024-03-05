@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import '../css/EditHeading.css';
 function EditHeading({ text }) {
   return (
     <div className="edit-heading-container">
