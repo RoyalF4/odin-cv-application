@@ -1,15 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 
-function EditPersonal() {
+function EditPersonal({ onPersonalSubmit }) {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [show, setShow] = useState({
     form: true,
     edit: false,
     data: false,
-  });
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
   });
 
   function handleChange(event) {
@@ -20,12 +17,14 @@ function EditPersonal() {
     });
   }
 
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
     setShow({
       form: false,
       edit: true,
       data: true,
     });
+    onPersonalSubmit(formData);
   }
 
   function handleEdit() {

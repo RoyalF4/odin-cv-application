@@ -1,5 +1,13 @@
-function PersonalDetail() {
-  return <div className="personal-container"></div>;
+/* eslint-disable react/prop-types */
+function PersonalDetail({ personalData }) {
+  const { name, email, phone } = personalData;
+  return (
+    <div className="personal-container">
+      <h1>{name}</h1>
+      <span>{email}</span>
+      <span>{phone}</span>
+    </div>
+  );
 }
 
 export default PersonalDetail;

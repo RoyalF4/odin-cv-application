@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import PersonalDetail from './PersonalDetail';
 import Education from './Education';
 import WorkExperience from './WorkExperience';
 
-function Resume() {
+function Resume({ personalData }) {
   return (
     <div className="resume-container">
-      <PersonalDetail />
+      <PersonalDetail personalData={personalData} />
       <Education />
       <WorkExperience />
     </div>
