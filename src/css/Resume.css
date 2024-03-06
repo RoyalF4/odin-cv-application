@@ -1,0 +1,31 @@
+.resume-container {
+  flex: 1;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.099);
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.resume-personal > h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.resume-personal > span {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+hr {
+  height: 1px;
+  background: black;
+  width: 96%;
+}

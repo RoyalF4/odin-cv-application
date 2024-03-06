@@ -2,7 +2,7 @@
 function PersonalDetail({ personalData }) {
   const { name, email, phone } = personalData;
   return (
-    <div className="personal-container">
+    <div className="resume-personal">
       <h1>{name}</h1>
       <span>{email}</span>
       <span>{phone}</span>

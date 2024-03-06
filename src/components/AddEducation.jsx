@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 
-function EditEducation({ id, education, onSubmit }) {
-  const school = education.filter((school) => id === school.id)[0];
-  const [formData, setFormData] = useState(school);
+function AddEducation({ onSubmit }) {
+  const [formData, setFormData] = useState({
+    name: '',
+    degree: '',
+    startDate: '',
+    endDate: '',
+  });
 
   function handleChange(event) {
     const { value, name } = event.target;
@@ -17,7 +21,7 @@ function EditEducation({ id, education, onSubmit }) {
       className="educationForm"
       onSubmit={(event) => {
         event.preventDefault();
-        onSubmit(formData, id);
+        onSubmit(formData);
       }}
     >
       <label>
@@ -65,4 +69,4 @@ function EditEducation({ id, education, onSubmit }) {
   );
 }
 
-export default EditEducation;
+export default AddEducation;

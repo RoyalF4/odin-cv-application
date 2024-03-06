@@ -3,6 +3,8 @@
   margin: 30px auto;
   padding: 30px;
   background: rgb(233, 232, 232);
+  display: flex;
+  gap: 30px;
 }
 
 .edit-container {

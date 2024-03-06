@@ -47,6 +47,7 @@ function EditPersonal({ onPersonalSubmit }) {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                placeholder="John Doe"
               />
             </label>
           </div>
@@ -58,6 +59,7 @@ function EditPersonal({ onPersonalSubmit }) {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Example123@email.com"
               />
             </label>
           </div>
@@ -69,6 +71,7 @@ function EditPersonal({ onPersonalSubmit }) {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                placeholder="123-456-7890"
               />
             </label>
           </div>

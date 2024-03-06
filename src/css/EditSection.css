@@ -23,9 +23,24 @@ label {
   display: block;
 }
 
-label {
+label,
+h3 {
   font-size: 0.9rem;
   font-weight: bold;
+}
+
+.personal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-container button {
+  align-self: center;
+}
+
+.personal-container > div > p {
+  font-size: 0.8rem;
+  padding: 10px 5px;
 }
 
 input {
