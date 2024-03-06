@@ -20,46 +20,46 @@ function EditEducation({ id, education, onSubmit }) {
         onSubmit(formData, id);
       }}
     >
-      <label>
-        School:
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Hogwarts"
-        />
-      </label>
-      <label>
-        Degree:
-        <input
-          type="text"
-          name="degree"
-          value={formData.degree}
-          onChange={handleChange}
-          placeholder="Masters in Broom Handling"
-        />
-      </label>
-      <label>
-        Start Date:
-        <input
-          type="text"
-          name="startDate"
-          value={formData.startDate}
-          onChange={handleChange}
-          placeholder="08/2020"
-        />
-      </label>
-      <label>
-        End Date:
-        <input
-          type="text"
-          name="endDate"
-          value={formData.endDate}
-          onChange={handleChange}
-          placeholder="05/2024, present..."
-        />
-      </label>
+      <label htmlFor="name">School</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Hogwarts"
+      />
+
+      <label htmlFor="degree">Degree</label>
+      <input
+        type="text"
+        id="degree"
+        name="degree"
+        value={formData.degree}
+        onChange={handleChange}
+        placeholder="Masters in Broom Handling"
+      />
+
+      <label htmlFor="startDate">Start Date</label>
+      <input
+        type="text"
+        id="startDate"
+        name="startDate"
+        value={formData.startDate}
+        onChange={handleChange}
+        placeholder="08/2020"
+      />
+
+      <label htmlFor="endDate">End Date</label>
+      <input
+        type="text"
+        id="endDate"
+        name="endDate"
+        value={formData.endDate}
+        onChange={handleChange}
+        placeholder="05/2024, present..."
+      />
+
       <button>Submit</button>
     </form>
   );

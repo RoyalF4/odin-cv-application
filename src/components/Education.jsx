@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function Education({ id, name, onDelete, onEdit }) {
   return (
-    <div>
+    <div className="school">
       <h3>{name}</h3>
       <button onClick={() => onEdit(id)}>Edit</button>
       <button onClick={() => onDelete(id)}>Delete</button>

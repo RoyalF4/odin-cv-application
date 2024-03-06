@@ -13,6 +13,7 @@ function EducationSection({ education, setEducation }) {
 
   if (education.length === 0 && !showAddForm) {
     setShowAddForm(true);
+    setShowList(false);
   }
   function handleDelete(id) {
     setEducation(education.filter((school) => school.id !== id));
@@ -28,6 +29,12 @@ function EducationSection({ education, setEducation }) {
     setEditId(id);
     setShowList(false);
     setShowEdit(true);
+  }
+
+  function handleAddClick() {
+    setShowList(false);
+    setShowEdit(false);
+    setShowAddForm(true);
   }
 
   function handleEdit(formData, id) {
@@ -56,6 +63,7 @@ function EducationSection({ education, setEducation }) {
             onDelete={handleDelete}
           />
         ))}
+      {showList && <button onClick={handleAddClick}>Add School</button>}
       {showAddForm && <AddEducation onSubmit={handleAdd} />}
       {showEdit && (
         <EditEducation

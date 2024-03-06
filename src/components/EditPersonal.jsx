@@ -39,59 +39,49 @@ function EditPersonal({ onPersonalSubmit }) {
     <div className="edit-personal-container">
       {show.form && (
         <form className="personal-form" onSubmit={handleSubmit}>
-          <div className="input-container">
-            <label>
-              Name
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-              />
-            </label>
-          </div>
-          <div className="input-container">
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Example123@email.com"
-              />
-            </label>
-          </div>
-          <div className="input-container">
-            <label>
-              Phone
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="123-456-7890"
-              />
-            </label>
-          </div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="John Doe"
+          />
+
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Example123@email.com"
+          />
+
+          <label htmlFor="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="123-456-7890"
+          />
+
           <button type="submit">Submit</button>
         </form>
       )}
       {show.edit && (
         <div className="personal-container">
-          <div>
-            <h3 className="data-heading">Name</h3>
-            <p className="data">{formData.name}</p>
-          </div>
-          <div>
-            <h3 className="data-heading">Email</h3>
-            <p className="data">{formData.email}</p>
-          </div>
-          <div>
-            <h3 className="data-heading">Phone</h3>
-            <p className="data">{formData.phone}</p>
-          </div>
+          <h3 className="data-heading">Name</h3>
+          <p className="data">{formData.name}</p>
+
+          <h3 className="data-heading">Email</h3>
+          <p className="data">{formData.email}</p>
+
+          <h3 className="data-heading">Phone</h3>
+          <p className="data">{formData.phone}</p>
           <button type="button" onClick={handleEdit}>
             Edit
           </button>

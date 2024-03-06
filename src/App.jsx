@@ -1,9 +1,8 @@
+import './css/App.css';
 import { useState } from 'react';
 import Resume from './components/Resume';
 import EditSidebar from './components/EditSidebar';
 import { v4 as uuidv4 } from 'uuid';
-import './css/reset.css';
-import './css/App.css';
 
 function App() {
   const [personalData, setPersonalData] = useState({

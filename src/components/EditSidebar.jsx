@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
+import '../css/EditSection.css';
 import EditHeading from './EditHeading';
 import EditPersonal from './EditPersonal';
 import EditWork from './EditWork';
 import EducationSection from './EducationSection';
-import '../css/EditSection.css';
 
 function EditSidebar({ onPersonalSubmit, education, setEducation }) {
   return (
