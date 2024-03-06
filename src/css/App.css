@@ -8,7 +8,7 @@
 }
 
 .edit-container {
-  max-width: 250px;
+  min-width: 250px;
   padding: 5px;
 }
 
