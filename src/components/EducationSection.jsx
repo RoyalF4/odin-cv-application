@@ -63,7 +63,11 @@ function EducationSection({ education, setEducation }) {
             onDelete={handleDelete}
           />
         ))}
-      {showList && <button onClick={handleAddClick}>Add School</button>}
+      {showList && (
+        <div className="add-button-container">
+          <button onClick={handleAddClick}>Add School</button>
+        </div>
+      )}
       {showAddForm && <AddEducation onSubmit={handleAdd} />}
       {showEdit && (
         <EditEducation
