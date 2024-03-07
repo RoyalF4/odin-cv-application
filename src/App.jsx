@@ -13,10 +13,10 @@ function App() {
   const [education, setEducation] = useState([
     {
       id: uuidv4(),
-      name: 'Penn State University',
-      degree: 'Bachelor of Computer Science',
+      name: 'Example University',
+      degree: 'Bachelors in Slacking Off',
       startDate: '8/2020',
-      endDate: '5/2024',
+      endDate: 'present',
     },
   ]);
   const [work, setWork] = useState([
@@ -25,7 +25,7 @@ function App() {
       name: 'ACME',
       title: 'Tester',
       details:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet reiciendis neque facilis, adipisci doloribus nam voluptatem laborum asperiores beatae? Suscipit?',
+        ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet reiciendis neque facilis, adipisci doloribus nam voluptatem laborum asperiores beatae? Suscipit?',
       startDate: '08/2022',
       endDate: '06/2023',
     },
@@ -44,7 +44,7 @@ function App() {
         work={work}
         setWork={setWork}
       />
-      <Resume personalData={personalData} educationData={education} />
+      <Resume personal={personalData} education={education} work={work} />
     </div>
   );
 }

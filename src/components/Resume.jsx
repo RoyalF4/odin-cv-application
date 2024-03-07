@@ -1,15 +1,20 @@
 /* eslint-disable react/prop-types */
+import '../css/Resume.css';
+import '../css/ResumeHeading.css';
 import PersonalDetail from './PersonalDetail';
 import WorkExperience from './WorkExperience';
-import '../css/Resume.css';
+import ResumeHeading from './ResumeHeading';
+import EducationInfo from './EducationInfo';
 
-function Resume({ personalData }) {
+function Resume({ personal, work, education }) {
   return (
     <div className="resume-container">
-      <PersonalDetail personalData={personalData} />
+      <PersonalDetail personalData={personal} />
       <hr />
-      {/* //<EducationInfo /> */}
-      <WorkExperience />
+      <ResumeHeading title="Education" />
+      <EducationInfo education={education} />
+      <ResumeHeading title="Work Experience" />
+      <WorkExperience work={work} />
     </div>
   );
 }

@@ -29,3 +29,35 @@ hr {
   background: black;
   width: 96%;
 }
+
+.resume-education {
+  margin: 0 50px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-rows: repeat(2, 25px);
+  grid-template-columns: 150px 1fr;
+}
+
+.resume-education > span:first-child {
+  grid-row: span 2;
+}
+
+.resume-education > span:nth-child(2) {
+  font-weight: bold;
+}
+
+.resume-work {
+  margin: 0 50px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-rows: repeat(3, 25px);
+  grid-template-columns: 150px 1fr;
+}
+
+.resume-work > span:first-child {
+  grid-row: span 3;
+}
+
+.resume-work > span:nth-child(2) {
+  font-weight: bold;
+}
