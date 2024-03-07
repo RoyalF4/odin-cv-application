@@ -16,3 +16,23 @@ input {
   width: 250px;
   padding: 5px;
 }
+
+button {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.26);
+}
+
+button:hover {
+  background: rgb(171, 171, 171);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.workItem > button,
+.school > button {
+  width: 75px;
+  justify-self: center;
+}

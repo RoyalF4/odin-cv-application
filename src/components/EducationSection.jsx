@@ -38,7 +38,6 @@ function EducationSection({ education, setEducation }) {
   }
 
   function handleEdit(formData, id) {
-    console.log(formData, id);
     setEducation(
       education.map((school) => {
         if (school.id === id) {
@@ -64,7 +63,7 @@ function EducationSection({ education, setEducation }) {
           />
         ))}
       {showList && (
-        <div className="add-button-cion">
+        <div className="add-button-container">
           <button onClick={handleAddClick}>Add School</button>
         </div>
       )}

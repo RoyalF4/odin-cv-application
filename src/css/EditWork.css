@@ -1,0 +1,28 @@
+.workItem {
+  background: white;
+  padding: 5px 10px;
+  margin: 5px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30px 20px;
+}
+
+.workItem > h3 {
+  grid-column: span 2;
+  align-self: center;
+}
+
+.add-work-container {
+  background: white;
+  height: 40px;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

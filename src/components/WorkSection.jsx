@@ -23,6 +23,12 @@ function WorkSection({ work, setWork }) {
     setShowList(true);
   }
 
+  function handleAddClick() {
+    setShowList(false);
+    setShowEdit(false);
+    setShowAddWork(true);
+  }
+
   function handleEditWork(edit) {
     setWork(
       work.map((item) => {
@@ -71,6 +77,11 @@ function WorkSection({ work, setWork }) {
             onDelete={handleDelete}
           />
         ))}
+      {showList && (
+        <div className="add-work-container">
+          <button onClick={handleAddClick}>Add Work</button>
+        </div>
+      )}
     </div>
   );
 }
