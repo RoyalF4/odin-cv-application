@@ -5,7 +5,13 @@ import EditPersonal from './EditPersonal';
 import EditWork from './EditWork';
 import EducationSection from './EducationSection';
 
-function EditSidebar({ onPersonalSubmit, education, setEducation }) {
+function EditSidebar({
+  onPersonalSubmit,
+  education,
+  setEducation,
+  work,
+  setWork,
+}) {
   return (
     <div className="edit-container">
       <EditHeading text="Personal Details" />
@@ -13,7 +19,7 @@ function EditSidebar({ onPersonalSubmit, education, setEducation }) {
       <EditHeading text="Education" />
       <EducationSection education={education} setEducation={setEducation} />
       <EditHeading text="Work Experience" />
-      <EditWork />
+      <EditWork work={work} setWork={setWork} />
     </div>
   );
 }

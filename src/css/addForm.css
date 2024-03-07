@@ -1,0 +1,15 @@
+.addForm {
+  background: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, 30px) 1fr repeat(5, 30px);
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+textarea {
+  resize: none;
+  font-family: 'Roboto';
+  background: rgb(233, 232, 232);
+}

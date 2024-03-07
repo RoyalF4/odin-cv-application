@@ -64,7 +64,7 @@ function EducationSection({ education, setEducation }) {
           />
         ))}
       {showList && (
-        <div className="add-button-container">
+        <div className="add-button-cion">
           <button onClick={handleAddClick}>Add School</button>
         </div>
       )}

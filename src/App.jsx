@@ -19,6 +19,16 @@ function App() {
       endDate: '5/2024',
     },
   ]);
+  const [work, setWork] = useState([
+    {
+      id: uuidv4(),
+      name: 'ACME',
+      title: 'Tester',
+      details: '',
+      startDate: '08/2022',
+      endDate: '06/2023',
+    },
+  ]);
 
   function onPersonalSubmit(newData) {
     setPersonalData(newData);
@@ -30,6 +40,8 @@ function App() {
         onPersonalSubmit={onPersonalSubmit}
         education={education}
         setEducation={setEducation}
+        work={work}
+        setWork={setWork}
       />
       <Resume personalData={personalData} educationData={education} />
     </div>

@@ -1,72 +1,85 @@
 /* eslint-disable react/prop-types */
+import '../css/addForm.css';
 import { useState } from 'react';
 
-function AddEducation({ onSubmit }) {
+function AddWork({ handleNewWork }) {
   const [formData, setFormData] = useState({
     name: '',
-    degree: '',
+    title: '',
+    details: '',
     startDate: '',
     endDate: '',
   });
 
   function handleChange(event) {
-    const { value, name } = event.target;
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   }
 
+  function autoResize(event) {
+    event.target.style.height = 'auto';
+    event.target.style.height = event.target.scrollHeight + 'px';
+  }
+
   return (
     <form
-      className="educationForm"
-      onSubmit={(event) => {
-        event.preventDefault();
-        onSubmit(formData);
+      className="addForm"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleNewWork(formData);
       }}
     >
-      <label htmlFor="name">School</label>
+      <label htmlFor="name">Company</label>
       <input
         type="text"
         id="name"
         name="name"
+        placeholder="ACME"
         value={formData.name}
         onChange={handleChange}
-        placeholder="Hogwarts"
       />
-
-      <label htmlFor="degree">Degree</label>
+      <label htmlFor="title">Title</label>
       <input
         type="text"
-        id="degree"
-        name="degree"
-        value={formData.degree}
+        id="title"
+        name="title"
+        placeholder="Test Dummy"
+        value={formData.value}
         onChange={handleChange}
-        placeholder="Masters in Broom Handling"
       />
-
+      <label htmlFor="details">Role</label>
+      <textarea
+        id="details"
+        name="details"
+        placeholder="Job details..."
+        value={formData.details}
+        onChange={handleChange}
+        onInput={autoResize}
+      />
       <label htmlFor="startDate">Start Date</label>
       <input
         type="text"
         id="startDate"
         name="startDate"
+        placeholder="03/2020"
         value={formData.startDate}
         onChange={handleChange}
-        placeholder="08/2020"
       />
-
       <label htmlFor="endDate">End Date</label>
       <input
         type="text"
         id="endDate"
         name="endDate"
+        placeholder="05/2022"
         value={formData.endDate}
         onChange={handleChange}
-        placeholder="05/2024, present..."
       />
       <button>Submit</button>
     </form>
   );
 }
 
-export default AddEducation;
+export default AddWork;
