@@ -2,7 +2,7 @@
 import '../css/EditSection.css';
 import EditHeading from './EditHeading';
 import EditPersonal from './EditPersonal';
-import EditWork from './EditWork';
+import WorkSection from './WorkSection';
 import EducationSection from './EducationSection';
 
 function EditSidebar({
@@ -19,7 +19,7 @@ function EditSidebar({
       <EditHeading text="Education" />
       <EducationSection education={education} setEducation={setEducation} />
       <EditHeading text="Work Experience" />
-      <EditWork work={work} setWork={setWork} />
+      <WorkSection work={work} setWork={setWork} />
     </div>
   );
 }

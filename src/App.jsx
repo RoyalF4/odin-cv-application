@@ -24,7 +24,8 @@ function App() {
       id: uuidv4(),
       name: 'ACME',
       title: 'Tester',
-      details: '',
+      details:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet reiciendis neque facilis, adipisci doloribus nam voluptatem laborum asperiores beatae? Suscipit?',
       startDate: '08/2022',
       endDate: '06/2023',
     },
